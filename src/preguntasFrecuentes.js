@@ -24,7 +24,7 @@ let preguntasFrecuentes= {
                 Respuesta:${faq.faq_answer}
     
                 `)
-                //return todosLasFaqs
+                
             })
             return todosLasFaqs
         
