@@ -1,4 +1,5 @@
 const fs = require('fs')
+
 let homePage = {
     bd: './data/movies.json',
     titulo: "Bienvenidos a DH Movies, el mejor sitio para encontrar las mejores películas, incluso mejor que Netflix, Cuevana y PopCorn",

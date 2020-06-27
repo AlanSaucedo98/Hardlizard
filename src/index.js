@@ -1,8 +1,9 @@
 let homePage = require("./homePage");
+let contacto = require("./contacto")
 let sucursales = require("./sucursales");
 let enCartelera = require("./enCartelera");
 let masVotadas = require("./masVotadas");
-
+let preguntasFrecuentes= require("./preguntasFrecuentes")
 
 let index = {
     homePage:function(res){
@@ -34,7 +35,10 @@ let index = {
         res.end()
     },
     contacto:function(res){
-
+        res.write(contacto.titulo)
+        res.write("\n")
+        res.write(contacto.contenido)
+        res.end()
     },
     masVotadas:function(res){
         res.write(`Total de pelis buenas : ` + masVotadas.pelisBuenas().length+"\n")
@@ -43,12 +47,18 @@ let index = {
         res.end()
     },
     preguntasFrecuentes:function(res){
-
+        res.write(preguntasFrecuentes.titulo)
+        res.write("\n")
+        res.write("Estas son las Preguntas frecuentes :" + preguntasFrecuentes.listadoPreguntas())
+        res.end()
     },
     sucursales:function(res){
-        res.write(sucursales.titulo)
+        res.write(sucursales.titulo + "\n")
         res.write("\n")
         res.write(`Estas son nuestras salas :` + sucursales.cantidadDeSalas())
+        res.write("\n")
+        res.write("\n")
+
         res.write("Listado de salas " + sucursales.salas())
         res.end()
     }

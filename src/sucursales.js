@@ -17,14 +17,17 @@ let sucursales = {
         teatros.theaters.forEach(function(teatro){
             todosLosTeatros.push(`
             
-            Nombre : ${teatros.theaters.name}
-            Direccion: ${teatros.theaters.address}
-            Descripcion:${teatros.theaters.description}
+            Nombre : ${teatro.name}
+
+            Direccion: ${teatro.address}
+            
+            Descripcion:${teatro.description}
 
             `)
         });
         return todosLosTeatros
     }
+
 
 }
 module.exports = sucursales
